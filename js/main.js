@@ -131,3 +131,79 @@
     
 })(jQuery);
 
+// <!-- Owl Carousel Initialization -->
+  $(document).ready(function(){
+    $(".rtl-carousel").owlCarousel({
+      items: 4,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      rtl: true,
+      responsive: {
+        0: { items: 2 },
+        600: { items: 3 },
+        1000: { items: 4 }
+      }
+    });
+    $(".normal-carousel").owlCarousel({
+      items: 4,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2500,
+      autoplayHoverPause: true,
+      rtl: false,
+      responsive: {
+        0: { items: 2 },
+        600: { items: 3 },
+        1000: { items: 4 }
+      }
+    });
+  });
+
+  $(document).ready(function(){
+    // Initialize RTL (Right to Left) Carousel
+    $(".rtl-carousel").owlCarousel({
+      loop: true,
+      rtl: true,
+      margin: 30,
+      autoplay: true,
+      autoplayTimeout: 2500,
+      autoplayHoverPause: false,
+      smartSpeed: 1200,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: { items: 2 },
+        576: { items: 3 },
+        768: { items: 4 },
+        992: { items: 5 }
+      }
+    });
+
+    // Initialize LTR (Left to Right) Carousel
+    $(".ltr-carousel").owlCarousel({
+      loop: true,
+      rtl: false,
+      margin: 30,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: false,
+      smartSpeed: 1200,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: { items: 2 },
+        576: { items: 3 },
+        768: { items: 4 },
+        992: { items: 5 }
+      }
+    });
+
+    // Refresh carousels on window resize
+    $(window).on("resize", function(){
+      $(".owl-carousel").trigger("refresh.owl.carousel");
+    });
+  });    

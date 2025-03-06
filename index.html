@@ -8,26 +8,78 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="css/owl.carousel.min.css" rel="stylesheet" />
+  
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="css/animate.css" rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .client-section {
+    position: relative;
+    background: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  /* Blurry effect on start and end */
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+  }
+  
+  .owl-carousel .owl-stage-outer::before,
+  .owl-carousel .owl-stage-outer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+  .owl-carousel .owl-stage-outer::before {
+    left: 0;
+  }
+  
+  .owl-carousel .owl-stage-outer::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+  .owl-carousel .item {
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .owl-carousel .item img {
+    width: 160px;
+    height: 80px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    /* filter: grayscale(100%);
+    opacity: 0.6; */  
+  }
+  
+  .owl-carousel .item img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+    </style>
   </head>
   <body>
     <!-- Spinner Start -->
@@ -250,7 +302,7 @@
       <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
           <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-          <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
+          <h1 class="mb-0">IT Solutions for Your Successful Business</h1>
         </div>
         <div class="row g-5">
           <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
@@ -314,7 +366,7 @@
               <p class="text-white mb-3">
                 Get a personalized quote tailored to your needs—fast and hassle-free. Contact us today to discover how we can help you achieve your goals!
               </p>
-              <h2 class="text-white mb-0">(+91) 9860133100 / 8600040039 </h2>
+              <h2 class="text-white mb-0">(+91) 9860133100 <br>(+91) 8600040039 </h2>
             </div>
           </div>
         </div>
@@ -354,7 +406,7 @@
               </a>
               <div class="ps-4">
                 <h5 class="mb-2">Call to ask any question</h5>
-                <h4 class="text-primary mb-0">(+91) 9860133100 / 8600040039 </h4>
+                <h4 class="text-primary mb-0">(+91) 9860133100 / (+91) 8600040039 </h4>
               </div>
             </div>
           </div>
@@ -395,25 +447,25 @@
     <div class="container py-5">
       <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
         <h5 class="fw-bold text-primary text-uppercase">Our Strength</h5>
-        <h1 class="mb-0">Why Choose SMK Corporate Advisor</h1>
+        <h1 class="mb-0">Why Choose Applause IT Solutions</h1>
       </div>
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6 text-center wow fadeInUp" data-wow-delay="0.2s">
-          <div class="p-4 bg-white rounded">
+        <div class="col-lg-4 col-md-6 text-center text-white wow fadeInUp" data-wow-delay="0.2s">
+          <div class="p-4 bg-primary rounded">
             <div class="stat-number">10+</div>
             <h4 class="mb-3">Years Experience</h4>
             <p>Decade of delivering successful IT solutions</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 text-center wow fadeInUp" data-wow-delay="0.4s">
-          <div class="p-4 bg-white rounded">
+        <div class="col-lg-4 col-md-6 text-center text-white wow fadeInUp" data-wow-delay="0.4s">
+          <div class="p-4 bg-primary rounded">
             <div class="stat-number">250+</div>
             <h4 class="mb-3">Successful Projects</h4>
             <p>Completed across various industries</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 text-center wow fadeInUp" data-wow-delay="0.6s">
-          <div class="p-4 bg-white rounded">
+        <div class="col-lg-4 col-md-6 text-center  text-white wow fadeInUp" data-wow-delay="0.6s">
+          <div class="p-4 bg-primary rounded">
             <div class="stat-number">99%</div>
             <h4 class="mb-3">Client Satisfaction</h4>
             <p>Consistently exceeding expectations</p>
@@ -545,37 +597,109 @@
     </div>
     <!-- Blog End -->
 
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-5 mb-5">
-        <div class="bg-white">
-          <div class="owl-carousel vendor-carousel">
-            <img src="img/vendor-1.jpg" alt="Vendor 1">
-            <img src="img/vendor-2.jpg" alt="Vendor 2">
-            <img src="img/vendor-3.jpg" alt="Vendor 3">
-            <img src="img/vendor-4.jpg" alt="Vendor 4">
-            <img src="img/vendor-5.jpg" alt="Vendor 5">
-            <img src="img/vendor-6.jpg" alt="Vendor 6">
-            <img src="img/vendor-7.jpg" alt="Vendor 7">
-            <img src="img/vendor-8.jpg" alt="Vendor 8">
-            <img src="img/vendor-9.jpg" alt="Vendor 9">
-          </div>
-        </div>
-      </div>
+   <!-- Client Logos Section Start -->
+<section class="client-section bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h5 class="text-primary text-uppercase fw-bold">Trusted Partners</h5>
+      <h2 class="mb-0">Companies Who Trust Our Expertise</h2>
     </div>
-    <!-- Vendor End -->
+
+    <!-- First Row: Right to Left -->
+    <div class="owl-carousel rtl-carousel fade-effect">
+      <div class="item"><img src="img/clients/1logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/2logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/3logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/4logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/5logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/6logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/7logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/8logo.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/9logo.png" alt="Client"></div>
+    </div>
+
+    <!-- Second Row: Left to Right -->
+    <div class="owl-carousel ltr-carousel fade-effect mt-4">
+      <div class="item"><img src="img/clients/NSF2.jpg" alt="Client"></div>
+      <div class="item"><img src="img/clients/MV.jpg" alt="Client"></div>
+      <div class="item"><img src="img/clients/MNF.jpg" alt="Client"></div>
+      <div class="item"><img src="img/clients/meghaartha.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_6.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_5.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_4.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_3.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_2.png" alt="Client"></div>
+      <div class="item"><img src="img/clients/logo_1.png" alt="Client"></div>
+    </div>
+  </div>
+</section>
+<!-- Client Logos Section End -->
 
     <div id="footer"></div>
   
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/wowjs@1.3.0/dist/wow.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"></script>
+   <script src="js/main.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Initialize RTL (Right to Left) Carousel
+        $(".rtl-carousel").owlCarousel({
+          loop: true,
+          rtl: true,
+          margin: 30,
+          autoplay: true,
+          autoplayTimeout: 2500,
+          autoplayHoverPause: false,
+          smartSpeed: 1200,
+          nav: false,
+          dots: false,
+          responsive: {
+            0: { items: 2 },
+            576: { items: 3 },
+            768: { items: 4 },
+            992: { items: 5 }
+          }
+        });
+    
+        // Initialize LTR (Left to Right) Carousel
+        $(".ltr-carousel").owlCarousel({
+          loop: true,
+          rtl: false,
+          margin: 30,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: false,
+          smartSpeed: 1200,
+          nav: false,
+          dots: false,
+          responsive: {
+            0: { items: 2 },
+            576: { items: 3 },
+            768: { items: 4 },
+            992: { items: 5 }
+          }
+        });
+    
+        // Refresh carousels on window resize
+        $(window).on("resize", function(){
+          $(".owl-carousel").trigger("refresh.owl.carousel");
+        });
+      });    
+</script>
+
   </body>
   </html>

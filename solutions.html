@@ -13,14 +13,8 @@
     rel="stylesheet"
   />
   <!-- Icon Font Stylesheet -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -28,6 +22,110 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
+  <style>
+  .industry-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industry-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .industry-card::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(244, 120, 10, 0.05);
+      transform: rotate(1deg);
+      transition: all 0.5s ease;
+    }
+
+    .industry-card:hover::after {
+      bottom: -30%;
+      left: -30%;
+    }
+
+    .industry-icon {
+      width: 80px;
+      height: 80px;
+      transition: all 0.3s ease;
+      background: linear-gradient(1deg, #F4780A 0%, #ff9542 100%);
+    }
+
+    .industry-card:hover .industry-icon {
+      transform: rotate(1deg) scale(1.1);
+      background: linear-gradient(1deg, #ff9542 0%, #F4780A 100%);
+    }
+
+    .solution-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .solution-list li:hover {
+      transform: translateX(5px);
+      color: #F4780A;
+    }
+
+    .solution-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 8px;
+      height: 8px;
+      background: #F4780A;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .solution-list li:hover::before {
+      width: 12px;
+      height: 12px;
+      top: 0.4em;
+    }
+
+    .cta-section {
+      background: linear-gradient(15deg, #F4780A 0%, #ff9542 100%);
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      border: none;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('img/dot-pattern.png') repeat;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .hero-bg {
+      background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('img/industry-hero.jpg') center/cover fixed;
+      min-height: 60vh;
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg {
+        background-attachment: scroll;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Spinner Start -->
@@ -38,112 +136,152 @@
    
   <div id="header"></div>
 
-  <!-- Page Header Start -->
+
+  <!-- Hero Section Start -->
   <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
     <div class="row py-5">
       <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-        <h1 class="display-4 text-white animated zoomIn">Solutions</h1>
-        <a href="index.html" class="h5 text-white">Home</a>
-        <i class="far fa-circle text-white px-2"></i>
-        <a href="solutions.html" class="h5 text-white">Solutions</a>
+        <h1 class="display-4 text-white animated zoomIn mb-4">IT Solutions </h1>
+        <div class="d-flex justify-content-center align-items-center text-light">
+          <a href="index.html" class="h5 text-white">Home</a>
+          <i class="far fa-circle text-white px-2"></i>
+          <a href="solutions.html" class="h5 text-white">Solutions</a>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Page Header End -->
+  <!-- Hero Section End -->
 
-  <!-- Comprehensive IT Services Section Start -->
+  <!-- Industry Solutions Section -->
   <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h5 class="fw-bold text-primary text-uppercase">Comprehensive IT Services</h5>
-        <h1 class="mb-0">Our IT Services</h1>
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 800px;">
+        <h5 class="fw-bold text-primary text-uppercase">Specialized Solutions</h5>
+        <h1 class="mb-4">Industry-Specific Technology Solutions</h1>
+        <p class="text-muted">Tailored digital transformations for your business vertical</p>
       </div>
+
       <div class="row g-5">
-        <!-- Service 1 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">Website Design &amp; Development</h4>
-            <ul class="list-unstyled">
-              <li>Custom websites, corporate sites, landing pages</li>
-              <li>WordPress &amp; PHP development</li>
+        <!-- Nonprofits -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-hands-helping fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">Nonprofit Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>Donor management systems</li>
+              <li>Volunteer coordination platforms</li>
+              <li>Fundraising campaign tools</li>
+              <li>Grant management software</li>
+              <li>Impact reporting dashboards</li>
             </ul>
           </div>
         </div>
-        <!-- Service 2 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">E-commerce Development</h4>
-            <ul class="list-unstyled">
-              <li>Shopify, WooCommerce, Magento</li>
-              <li>Multi-vendor marketplaces</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Service 3 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">Mobile App Development</h4>
-            <ul class="list-unstyled">
-              <li>Native &amp; cross-platform apps</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Service 4 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">UX/UI Design</h4>
-            <ul class="list-unstyled">
-              <li>Wireframes, prototypes, user research</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Service 5 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">SEO &amp; Digital Marketing</h4>
-            <ul class="list-unstyled">
-              <li>SEO, PPC, Content Marketing</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Service 6 -->
-        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-          <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
-            <h4 class="mb-3">Cloud &amp; DevOps Services</h4>
-            <ul class="list-unstyled">
-              <li>AWS, Azure, CI/CD pipelines</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Comprehensive IT Services Section End -->
 
-  <!-- Industry-Specific Solutions Section Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h5 class="fw-bold text-primary text-uppercase">Solutions</h5>
-        <h1 class="mb-0">Industry-Specific Solutions</h1>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="bg-light rounded p-5">
-            <h4 class="mb-4">Custom IT Solutions for Your Business</h4>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Nonprofits – Donor &amp; volunteer management software</li>
-              <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> E-commerce – Scalable online store solutions</li>
-              <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Startups – MVP development &amp; rapid prototyping</li>
-              <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Healthcare – HIPAA-compliant digital solutions</li>
-              <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Real Estate – Property listing &amp; CRM solutions</li>
+        <!-- E-commerce -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-shopping-cart fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">E-commerce Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>Scalable online store development</li>
+              <li>Multi-vendor marketplace systems</li>
+              <li>Inventory management integration</li>
+              <li>Payment gateway solutions</li>
+              <li>AI-powered recommendation engines</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Startups -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-rocket fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">Startup Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>MVP development & prototyping</li>
+              <li>Investor-ready tech stack setup</li>
+              <li>Scalable architecture design</li>
+              <li>Growth hacking tools integration</li>
+              <li>Pitch deck technical support</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-hospital-user fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">Healthcare Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>HIPAA-compliant systems</li>
+              <li>Patient portal development</li>
+              <li>Telemedicine platforms</li>
+              <li>Medical record management</li>
+              <li>IoT health monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Real Estate -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-building fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">Real Estate Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>Property listing platforms</li>
+              <li>Virtual tour integrations</li>
+              <li>CRM & lead management</li>
+              <li>Automated valuation models</li>
+              <li>Blockchain-based transactions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="industry-card h-100 bg-light rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
+            <div class="industry-icon mb-3 rounded-circle d-flex align-items-center justify-content-center">
+              <i class="fas fa-graduation-cap fa-2x text-white"></i>
+            </div>
+            <h4 class="mb-3">Education Solutions</h4>
+            <ul class="solution-list list-unstyled text-start">
+              <li>LMS platform development</li>
+              <li>Virtual classroom systems</li>
+              <li>Student management portals</li>
+              <li>AI-powered tutoring systems</li>
+              <li>Educational app development</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Industry-Specific Solutions Section End -->
+
+  <!-- Custom Solutions CTA -->
+  <div class="container py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="cta-section py-5 px-4 text-center rounded">
+      <h2 class="text-white mb-4">Need Custom Solutions for Your Industry?</h2>
+      <p class="text-light mb-5">Our experts will design tailored solutions for your unique business needs</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg px-5 py-3">
+          <i class="fas fa-comments me-2"></i>Discuss Your Project
+        </a>
+        <a href="tel:+1234567890" class="btn btn-outline-light btn-lg px-5 py-3">
+          <i class="fas fa-phone-alt me-2"></i>Instant Consultation
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer Start -->
   <div id="footer"></div>
