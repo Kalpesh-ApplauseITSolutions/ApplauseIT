@@ -4,22 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Applause IT Solutions</title>
-  <link href="img/favicon.ico" rel="icon" />
+  <link href="img/favicon/favicon.ico" rel="icon" />
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <!-- Icon Font Stylesheet -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  
   <!-- Libraries Stylesheet -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="lib/animate/animate.min.css" rel="stylesheet" />
-  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  
+  <!-- Customized Bootstrap Stylesheet -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
+  
   <style>
+    /* Active nav link: circular background effect */
+    .navbar-nav .nav-link.active {
+        background: var(--primary);
+        color: #fff !important;
+        border-radius: 50%;
+        padding: 10px 15px;
+        transition: background 0.3s ease;
+    }
     /* Custom hover effect for team cards */
     .team-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -28,9 +41,63 @@
       transform: translateY(-10px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-    /* Additional spacing for section headings */
+    /* Section headings spacing */
     .section-title h5 {
       letter-spacing: 2px;
+    }
+    /* Client logos section */
+    .client-section {
+      position: relative;
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+    /* Owl Carousel gradient fade at edges */
+    .owl-carousel .owl-stage-outer {
+      position: relative;
+    }
+    .owl-carousel .owl-stage-outer::before,
+    .owl-carousel .owl-stage-outer::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .owl-carousel .owl-stage-outer::before {
+      left: 0;
+    }
+    .owl-carousel .owl-stage-outer::after {
+      right: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .owl-carousel .item {
+      text-align: center;
+      padding: 10px;
+      transition: all 0.5s ease-in-out;
+    }
+    .owl-carousel .item img {
+      width: 160px;
+      height: 80px;
+      object-fit: contain;
+      transition: all 0.3s ease-in-out;
+    }
+    .owl-carousel .item img:hover {
+      transform: scale(1.1);
+    }
+    /* Dynamic shadow effect for images */
+    .img-shadow {
+      transition: all 0.3s ease;
+    }
+    .img-shadow:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transform: scale(1.02);
+    }
+    /* CSS Variables */
+    :root {
+      --primary: #F4780A;
+      --secondary: #091E3E;
     }
   </style>
 </head>
@@ -41,64 +108,8 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Header (Static or dynamically loaded) -->
-  <div id="header">
-    <!-- Topbar -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-      <div class="row gx-0">
-        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-          <div class="d-inline-flex align-items-center" style="height: 45px;">
-            <small class="me-3 text-light">
-              <i class="fa fa-map-marker-alt me-2"></i> Downtown Road, Pune
-            </small>
-            <small class="me-3 text-light">
-              <i class="fa fa-phone-alt me-2"></i> (+91) 9145730054
-            </small>
-            <small class="text-light">
-              <i class="fa fa-envelope-open me-2"></i> info@cobaztech.com
-            </small>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <div class="d-inline-flex align-items-center" style="height: 45px;">
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-            <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Navbar -->
-    <div class="container-fluid position-relative p-0">
-      <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-          <h1 class="m-0" style="display: flex; align-items: center;">
-            <img src="img/cobaztech.png" alt="Cobaztech Logo" style="width: 50%; max-width: 100%; margin-top: -20px; height: 130px;">
-            <span style="display: inline-block; margin-top: -20px; vertical-align: middle;">Cobaztech</span>
-          </h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="/About" class="nav-item nav-link active">About Us</a>
-            <a href="/Service" class="nav-item nav-link">Services</a>
-            <a href="/Solutions" class="nav-item nav-link">Solutions</a>
-            <a href="/Portfolio" class="nav-item nav-link">Portfolio</a>
-            <a href="/CaseStudies" class="nav-item nav-link">Case Studies</a>
-            <a href="/Blog" class="nav-item nav-link">Blog</a>
-            <a href="/Contact" class="nav-item nav-link">Contact Us</a>
-          </div>
-          <a href="/GetConsultation" class="btn btn-primary py-2 px-4 ms-3">Get a Free Consultation</a>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <!-- End Header -->
+  <!-- Header (Dynamically loaded via header.html) -->
+  <div id="header"></div>
 
   <!-- Page Header Start -->
   <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
@@ -124,11 +135,17 @@
             <h1 class="mb-0">How Applause IT Solutions Started</h1>
           </div>
           <p>
-            Founded over a decade ago, Applause IT Solutions began as a small startup with a vision to empower businesses through innovative digital solutions. Driven by a passion for technology and a commitment to excellence, our founders combined years of industry experience to create a company that delivers measurable results. Today, we serve a diverse clientele, blending creativity with data-driven strategies to transform brands and drive growth.
+            Founded over a decade ago, Applause IT Solutions began as a small startup with a vision to empower businesses through innovative digital solutions. Inspired by the pursuit of excellence, our journey is built on trust, creativity, and the drive to transform challenges into growth opportunities.
+          </p>
+          <p>
+            Our approach is rooted in a deep understanding of technology and a commitment to staying ahead of the curve. We combine industry expertise with cutting‑edge practices to deliver solutions that drive success.
+          </p>
+          <p>
+            <strong>Our Vision:</strong> To be the leading digital transformation partner, delivering innovative solutions that empower businesses worldwide.
           </p>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.3s" src="img/our-story.jpg" alt="Our Story">
+          <img class="img-fluid rounded wow zoomIn img-shadow" data-wow-delay="0.3s" src="img/our-story.jpg" alt="Our Story">
         </div>
       </div>
 
@@ -140,11 +157,14 @@
             <h1 class="mb-0">Our Commitment to Innovation</h1>
           </div>
           <p>
-            Our mission is to drive business growth by delivering cutting-edge IT solutions that are both innovative and scalable. We envision a world where technology seamlessly bridges the gap between business challenges and opportunities. Through our relentless pursuit of excellence, we empower organizations to embrace digital transformation and stay ahead in a rapidly evolving market.
+            Our mission is to drive business growth by delivering cutting‑edge IT solutions that are both innovative and scalable. We bridge the gap between technology and business challenges to create tailored solutions.
+          </p>
+          <p>
+            At Applause IT Solutions, we strive to deliver unparalleled digital transformation services that empower organizations to thrive in a competitive landscape.
           </p>
         </div>
         <div class="col-lg-6 order-lg-1">
-          <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.3s" src="img/vision.jpg" alt="Mission & Vision">
+          <img class="img-fluid rounded wow zoomIn img-shadow" data-wow-delay="0.3s" src="img/vision.jpg" alt="Mission & Vision">
         </div>
       </div>
 
@@ -159,33 +179,33 @@
         <!-- Team Member 1 -->
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="card border-0 team-card">
-            <img src="img/default-team.png" class="card-img-top" alt="CEO">
+            <img src="img/default-team.png" class="card-img-top img-shadow" alt="CEO">
             <div class="card-body text-center">
               <h5 class="card-title text-primary">Mr. Vaibhav Mogarekar</h5>
               <p class="card-text">CEO &amp; Founder</p>
-              <p class="small">John brings over 15 years of experience in IT and digital marketing, driving strategic growth for global brands.</p>
+              <p class="small">With over 15 years of experience in IT and digital marketing, Mr. Mogarekar drives our strategic vision and inspires innovation.</p>
             </div>
           </div>
         </div>
         <!-- Team Member 2 -->
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
           <div class="card border-0 team-card">
-            <img src="img/default-team.png" class="card-img-top" alt="CTO">
+            <img src="img/default-team.png" class="card-img-top img-shadow" alt="CTO">
             <div class="card-body text-center">
               <h5 class="card-title text-primary">Jane Smith</h5>
               <p class="card-text">CTO</p>
-              <p class="small">Jane leads our technical innovations, ensuring our solutions remain at the forefront of technology.</p>
+              <p class="small">Jane spearheads our technical innovations, ensuring our solutions remain cutting‑edge and perfectly aligned with client needs.</p>
             </div>
           </div>
         </div>
         <!-- Team Member 3 -->
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
           <div class="card border-0 team-card">
-            <img src="img/default-team.png" class="card-img-top" alt="CMO">
+            <img src="img/default-team.png" class="card-img-top img-shadow" alt="CMO">
             <div class="card-body text-center">
               <h5 class="card-title text-primary">Michael Lee</h5>
               <p class="card-text">CMO</p>
-              <p class="small">Michael drives our creative and marketing strategies, consistently delivering impactful campaigns.</p>
+              <p class="small">Michael drives our creative and marketing strategies, consistently delivering impactful campaigns that resonate globally.</p>
             </div>
           </div>
         </div>
@@ -199,52 +219,127 @@
             <h1 class="mb-0">Digital Transformation Strategy</h1>
           </div>
           <p>
-            At Applause IT Solutions, our approach to digital transformation is holistic and customer-centric. We begin by understanding your unique business challenges and goals, then craft tailor-made strategies that leverage emerging technologies. Our agile methodology ensures continuous improvement and scalability, allowing you to stay ahead in an ever-changing digital landscape.
+            Our approach is holistic and customer‑centric. We start by understanding your unique challenges and goals, then design tailor‑made strategies that leverage the latest in technology.
           </p>
           <p>
-            We integrate the latest in cloud computing, AI, and data analytics to optimize your operations, boost efficiency, and create a seamless user experience across all digital channels.
+            With agile methodologies and continuous improvement, we ensure your business stays ahead in a rapidly evolving digital landscape.
           </p>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.3s" src="img/digital-ransformation.jpg" alt="Digital Transformation">
+          <img class="img-fluid rounded wow zoomIn img-shadow" data-wow-delay="0.3s" src="img/digital-ransformation.jpg" alt="Digital Transformation">
         </div>
       </div>
     </div>
   </div>
   <!-- About Us Section End -->
 
-  <!-- Vendor Section (Optional) -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5 mb-5">
-      <div class="bg-white">
-        <div class="owl-carousel vendor-carousel">
-          <img src="img/vendor-1.jpg" alt="Vendor 1" />
-          <img src="img/vendor-2.jpg" alt="Vendor 2" />
-          <img src="img/vendor-3.jpg" alt="Vendor 3" />
-          <img src="img/vendor-4.jpg" alt="Vendor 4" />
-          <img src="img/vendor-5.jpg" alt="Vendor 5" />
-          <img src="img/vendor-6.jpg" alt="Vendor 6" />
-          <img src="img/vendor-7.jpg" alt="Vendor 7" />
-          <img src="img/vendor-8.jpg" alt="Vendor 8" />
-          <img src="img/vendor-9.jpg" alt="Vendor 9" />
-        </div>
+  <!-- Client Logos Section Start -->
+  <section class="client-section bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase fw-bold">Trusted Partners</h5>
+        <h2 class="mb-0">Companies Who Trust Our Expertise</h2>
+      </div>
+      <!-- First Row: Right to Left -->
+      <div class="owl-carousel rtl-carousel fade-effect">
+        <div class="item"><img src="img/clients/1logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/2logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/3logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/4logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/5logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/6logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/7logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/8logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/9logo.png" alt="Client"></div>
+      </div>
+      <!-- Second Row: Left to Right -->
+      <div class="owl-carousel ltr-carousel fade-effect mt-4">
+        <div class="item"><img src="img/clients/NSF2.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/MV.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/MNF.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/meghaartha.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_6.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_5.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_4.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_3.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_2.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_1.png" alt="Client"></div>
       </div>
     </div>
-  </div>
-  <!-- Vendor Section End -->
+  </section>
+  <!-- Client Logos Section End -->
 
-  <!-- Footer (Dynamically loaded or static) -->
+  <!-- Footer (Dynamically loaded via footer.html) -->
   <div id="footer"></div>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/animate/animate.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Load jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- WOW.js -->
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.3.0/dist/wow.min.js"></script>
+  <!-- Tilt.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <!-- Main Custom Script -->
   <script src="js/main.js"></script>
   <script>
-    new WOW().init();
+    $(document).ready(function () {
+      // Initialize RTL Carousel
+      $(".rtl-carousel").owlCarousel({
+        loop: true,
+        rtl: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Initialize LTR Carousel
+      $(".ltr-carousel").owlCarousel({
+        loop: true,
+        rtl: false,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Refresh carousels on window resize
+      $(window).on("resize", function () {
+        $(".owl-carousel").trigger("refresh.owl.carousel");
+      });
+
+      // Initialize tilt effect on elements with .stats-card (if any)
+      $('.stats-card').tilt({
+        glare: true,
+        maxGlare: 0.2,
+        reset: false
+      });
+
+      // Initialize WOW.js for animation effects
+      new WOW().init();
+    });
   </script>
 </body>
 </html>

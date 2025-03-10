@@ -17,12 +17,66 @@
         }, 1);
     };
     spinner();
-    
-    
+    $(document).ready(function () {
+      // Initialize RTL (Right to Left) Carousel
+      $(".rtl-carousel").owlCarousel({
+        loop: true,
+        rtl: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Initialize LTR (Left to Right) Carousel
+      $(".ltr-carousel").owlCarousel({
+        loop: true,
+        rtl: false,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Refresh carousels on window resize
+      $(window).on("resize", function () {
+        $(".owl-carousel").trigger("refresh.owl.carousel");
+      });
+    });
+    // Initialize tilt.js
+    $('.stats-card').tilt({
+      glare: true,
+      maxGlare: 0.2,
+      reset: false
+    });
     // Initiate the wowjs
     new WOW().init();
 
-
+    $(document).ready(function(){
+        $('.stats-card').tilt({
+            glare: true,
+            maxGlare: 0.2,
+            reset: false
+        });
+    });
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 45) {
@@ -31,7 +85,6 @@
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
-    
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");
