@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - Applause IT Solutions</title>
+  <link href="img/favicon/favicon.ico" rel="icon" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link href="css/owl.carousel.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+  </div>
+  <!-- Spinner End -->
+  <div id="header"></div>
+
+
+  <!-- Header Carousel Start -->
+  <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <video autoplay muted loop playsinline class="w-100">
+          <source src="img/header.mp4" type="video/mp4">
+        </video>
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h5 class="text-white text-uppercase mb-3 animate__animated animate__slideInDown">Creative & Innovative</h5>
+            <h1 class="display-1 text-white mb-md-4 animate__animated animate__zoomIn">Creative & Innovative Digital
+              Solution</h1>
+            <a href="enquiry.html"
+              class="btn btn-primary py-md-3 px-md-5 me-3 animate__animated animate__slideInLeft">Enquiry</a>
+            <a href="contact.html"
+              class="btn btn-secondary py-md-3 px-md-5 animate__animated animate__slideInRight">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <video autoplay muted loop playsinline class="w-100">
+          <source src="img/header.mp4" type="video/mp4">
+        </video>
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative &amp; Innovative</h5>
+            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative &amp; Innovative Digital Solution</h1>
+            <a href="enquiry.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Enquiry</a>
+            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Header Carousel End -->
+
+  <!-- Full Screen Search Start -->
+  <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content" style="background: rgba(9, 30, 62, 0.7);">
+        <div class="modal-header border-0">
+          <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center">
+          <div class="input-group" style="max-width: 600px;">
+            <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+            <button class="btn btn-primary px-4">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full Screen Search End -->
+
+  <!-- Facts Start -->
+  <div class="container-fluid facts py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+      <div class="row gx-0">
+        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+          <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+            <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+              style="width: 60px; height: 60px;">
+              <i class="fa fa-users text-primary"></i>
+            </div>
+            <div class="ps-4">
+              <h5 class="text-white mb-0">Happy Clients</h5>
+              <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+          <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+            <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+              style="width: 60px; height: 60px;">
+              <i class="fa fa-check text-white"></i>
+            </div>
+            <div class="ps-4">
+              <h5 class="text-primary mb-0">Projects Done</h5>
+              <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+          <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+            <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+              style="width: 60px; height: 60px;">
+              <i class="fa fa-award text-primary"></i>
+            </div>
+            <div class="ps-4">
+              <h5 class="text-white mb-0">Win Awards</h5>
+              <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Facts End -->
+
+  <!-- About Start -->
+  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="section-title position-relative pb-3 mb-5">
+            <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+            <h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
+          </div>
+          <p class="mb-4">
+            Applause IT Solutions is a results-driven digital marketing agency that helps businesses grow through
+            tailored SEO, PPC, and social media strategies. We focus on delivering measurable success by driving
+            targeted traffic and boosting brand visibility.
+          </p>
+          <div class="row g-0 mb-3">
+            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+              <h5 class="mb-3">
+                <i class="fa fa-check text-primary me-3"></i>
+                Award Winning
+              </h5>
+              <h5 class="mb-3">
+                <i class="fa fa-check text-primary me-3"></i>
+                Professional Staff
+              </h5>
+            </div>
+            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+              <h5 class="mb-3">
+                <i class="fa fa-check text-primary me-3"></i>
+                24/7 Support
+              </h5>
+              <h5 class="mb-3">
+                <i class="fa fa-check text-primary me-3"></i>
+                Fair Prices
+              </h5>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+            <a href="tel:+919860133100" class="bg-primary d-flex align-items-center justify-content-center rounded"
+              style="width: 60px; height: 60px;">
+              <i class="fa fa-phone-alt text-white"></i>
+            </a>
+            <div class="ps-4">
+              <h5 class="mb-2">Call to ask any question</h5>
+              <h4 class="text-primary mb-0">(+91) 9860133100 / 8600040039 </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5" style="min-height: 500px;">
+          <div class="position-relative h-100">
+            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg"
+              alt="About Image" style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+  <!-- Features Start -->
+  <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
+        <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="row g-5">
+            <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px;">
+                <i class="fa fa-cubes text-white"></i>
+              </div>
+              <h4>Best In Industry</h4>
+              <p class="mb-0">Setting the standard for excellence and innovation in the industry.</p>
+            </div>
+            <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px;">
+                <i class="fa fa-award text-white"></i>
+              </div>
+              <h4>Award Winning</h4>
+              <p class="mb-0">Recognized for outstanding achievement and excellence in our field.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+          <div class="position-relative h-100">
+            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg"
+              alt="Feature Image" style="object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row g-5">
+            <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px;">
+                <i class="fa fa-users-cog text-white"></i>
+              </div>
+              <h4>Professional Staff</h4>
+              <p class="mb-0">Dedicated experts committed to delivering exceptional service and results.</p>
+            </div>
+            <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+              <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px;">
+                <i class="fa fa-phone-alt text-white"></i>
+              </div>
+              <h4>24/7 Support</h4>
+              <p class="mb-0">Always here for you, providing reliable support anytime, day or night.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Features End -->
+
+  <!-- Our Services Start -->
+  <div class="container-fluid py-3">
+    <div class="container py-5">
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
+        <h1 class="mb-0">Advanced IT Solutions for Digital Success</h1>
+      </div>
+      <div class="row g-4">
+        <!-- Web Development -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="service-item bg-light rounded-4 p-5 text-center">
+            <div class="service-icon mb-4">
+              <i class="fas fa-code fa-3x text-white"></i>
+            </div>
+            <h3 class="mb-3">Custom Web Development</h3>
+            <p class="mb-4">Build responsive, scalable web applications with modern frameworks and cloud-native
+              architectures.</p>
+            <div class="service-hover">
+              <a href="/services.html" class="btn btn-primary px-4">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App Development -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="service-item h-100 bg-light rounded-4 p-5 text-center">
+            <div class="service-icon mb-4">
+              <i class="fas fa-mobile-alt fa-3x text-white"></i>
+            </div>
+            <h3 class="mb-3">Mobile App Development</h3>
+            <p class="mb-4">Native and cross-platform mobile solutions with seamless UX and robust backend integration.
+            </p>
+            <div class="service-hover">
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud Solutions -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="service-item bg-light rounded-4 p-5 text-center">
+            <div class="service-icon mb-4">
+              <i class="fas fa-cloud fa-3x text-white"></i>
+            </div>
+            <h3 class="mb-3">Cloud <br> Solutions</h3>
+            <p class="mb-4">AWS, Azure & Google Cloud integration with DevOps automation and microservices architecture.
+            </p>
+            <div class="service-hover">
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="service-item bg-light rounded-4 p-5 text-center">
+            <div class="service-icon mb-4">
+              <i class="fas fa-shield-alt fa-3x text-white"></i>
+            </div>
+            <h3 class="mb-3">Cybersecurity</h3>
+            <p class="mb-4">End-to-end security solutions including vulnerability assessment and threat monitoring.</p>
+            <div class="service-hover">
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- IT Consulting -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="service-item bg-light rounded-4 p-5 text-center">
+            <div class="service-icon mb-4">
+              <i class="fas fa-chart-line fa-3x text-white"></i>
+            </div>
+            <h3 class="mb-3">IT Consulting</h3>
+            <p class="mb-4">Strategic technology roadmap development and digital transformation consulting.</p>
+            <div class="service-hover">
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="service-cta bg-primary rounded-4 p-2 text-center h-100 d-flex flex-column justify-content-center">
+            <div class="cta-content">
+              <h3 class="text-white mb-4">Start Your Project</h3>
+              <p class="text-light mb-4">Get a customized solution proposal within 24 hours</p>
+              <div class="cta-contact">
+                <a href="tel:+919860133100" class="d-block text-white h4 mb-3"><i class="fas fa-phone-alt me-2"></i>+91 98601 33100</a>
+                <a href="mailto:info@applauseitsolutions.com" class="text-white"><i class="fas fa-envelope me-2"></i>info@applauseitsolutions.com</a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Our Services End -->
+
+  <!-- Quote Start -->
+  <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="section-title position-relative pb-3 mb-5">
+            <h5 class="fw-bold text-primary text-uppercase">Get Enquiry</h5>
+            <h1 class="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
+          </div>
+          <div class="row gx-3">
+            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+              <h5 class="mb-4">
+                <i class="fa fa-reply text-primary me-3"></i>
+                Reply within 24 hours
+              </h5>
+            </div>
+            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+              <h5 class="mb-4">
+                <i class="fa fa-phone-alt text-primary me-3"></i>
+                24 hrs telephone support
+              </h5>
+            </div>
+          </div>
+          <p class="mb-4">
+            Looking for a customized solution? We're here to help! Reach out today for a free, no-obligation quote
+            tailored to your needs. Our team is ready to assist you every step of the way—contact us now!
+          </p>
+          <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+            <a href="tel:+919860133100" class="bg-primary d-flex align-items-center justify-content-center rounded"
+              style="width: 60px; height: 60px;">
+              <i class="fa fa-phone-alt text-white"></i>
+            </a>
+            <div class="ps-4">
+              <h5 class="mb-2">Call to ask any question</h5>
+              <h4 class="text-primary mb-0">(+91) 9860133100 / (+91) 8600040039 </h4>
+            </div>
+          </div>
+        </div>
+<!-- enquiry-form.html -->
+    
+      </div>
+    </div>
+  </div>
+  <!-- Quote End -->
+
+  <!-- Why Choose Us Start -->
+  <section class="why-choose-section py-3">
+    <div class="container py-5">
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Our Strength</h5>
+        <h1 class="mb-0 display-5 fw-bold">Why Choose Applause IT Solutions</h1>
+      </div>
+
+      <div class="row g-4">
+        <!-- Experience Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="stats-card bg-primary text-center p-4 rounded-4 h-100 wow fadeInUp" data-wow-delay="0.2s"
+            data-tilt data-tilt-max="5">
+            <div class="icon-box mb-3">
+              <i class="fas fa-history fa-3x text-white"></i>
+            </div>
+            <h2 class="stat-number text-white mb-3 display-4 fw-bold">10+</h2>
+            <h4 class="text-white mb-3">Years Experience</h4>
+            <p class="text-light opacity-75 mb-0">Decade of delivering successful IT solutions</p>
+            <div class="hover-border"></div>
+          </div>
+        </div>
+
+        <!-- Projects Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="stats-card bg-primary text-center p-4 rounded-4 h-100 wow fadeInUp" data-wow-delay="0.4s"
+            data-tilt data-tilt-max="5">
+            <div class="icon-box mb-3">
+              <i class="fas fa-tasks fa-3x text-white"></i>
+            </div>
+            <h2 class="stat-number text-white mb-3 display-4 fw-bold">250+</h2>
+            <h4 class="text-white mb-3">Successful Projects</h4>
+            <p class="text-light opacity-75 mb-0">Completed across various industries</p>
+            <div class="hover-border"></div>
+          </div>
+        </div>
+
+        <!-- Satisfaction Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="stats-card bg-primary text-center p-4 rounded-4 h-100 wow fadeInUp" data-wow-delay="0.6s"
+            data-tilt data-tilt-max="5">
+            <div class="icon-box mb-3">
+              <i class="fas fa-smile-beam fa-3x text-white"></i>
+            </div>
+            <h2 class="stat-number text-white mb-3 display-4 fw-bold">99%</h2>
+            <h4 class="text-white mb-3">Client Satisfaction</h4>
+            <p class="text-light opacity-75 mb-0">Consistently exceeding expectations</p>
+            <div class="hover-border"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us End -->
+
+  <!-- Testimonial Start -->
+  <section class="testimonial-section bg-light py-3">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase fw-bold">Testimonials</h5>
+        <h2 class="mb-4">What Our Clients Say</h2>
+      </div>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <!-- Testimonial Item 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="testimonial-item">
+                  <div class="text-center">
+                    <img src="img/clients/logo_2.png" class="testimonial-img rounded-circle" alt="Client">
+                    <div class="testimonial-content">
+                      <p class="mb-4">We have found a fantastic team at 'Applause Techno Solution' with whom we can
+                        depend on to understand our web development strategies and transition them to high-end tactics.
+                      </p>
+                      <div class="client-info">
+                        <h5 class="mb-1 text-primary">Mr.Mogarekar</h5>
+                        <p class="text-muted mb-0">Founder, ROSTRUM INDIA SOCIAL ORGANIZATION, PUNE</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Item 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="testimonial-item">
+                  <div class="text-center">
+                    <img src="img/clients/logo_3.png" class="testimonial-img rounded-circle" alt="Client">
+                    <div class="testimonial-content">
+                      <p class="mb-4">We have found a fantastic team at 'Applause Techno Solution' with whom we can
+                        depend on to understand our web development strategies and transition them to high-end tactics.
+                      </p>
+                      <div class="client-info">
+                        <h5 class="mb-1 text-primary">INFO10 MEDIA, PUNE</h5>
+                        <!-- <p class="text-muted mb-0">INFO10 MEDIA, PUNE</p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-primary p-3 rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-primary p-3 rounded-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button> -->
+      </div>
+    </div>
+  </section>
+  <!-- Testimonial End -->
+  <!-- Blog Start -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Latest Blog</h5>
+        <h1 class="mb-0">Read The Latest Articles from Our Blog Post</h1>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
+            <div class="blog-img position-relative overflow-hidden">
+              <img class="img-fluid" src="img/blog-1.jpg" alt="Blog 1">
+              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
+                Web Design
+              </a>
+            </div>
+            <div class="p-4">
+              <h4 class="mb-3">How to build a website</h4>
+              <p>
+                Building a website begins with defining your goals and selecting the right platform to bring your vision
+                to life. By choosing a user-friendly design, incorporating essential features, and optimizing for search
+                engines, you can create a functional and visually appealing online presence.
+              </p>
+              
+              <a href="/blog.html" class="btn btn-primary px-4">Learn More</a>
+            
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
+            <div class="blog-img position-relative overflow-hidden">
+              <img class="img-fluid" src="img/blog-2.jpg" alt="Blog 2">
+              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
+                App Design
+              </a>
+            </div>
+            <div class="p-4">
+              <h4 class="mb-3">How to build application</h4>
+              <p>
+                Building an application starts with identifying its purpose and target audience, followed by designing
+                an intuitive user interface. With the right development tools and thorough testing, you can create a
+                high performing app that delivers value to users.
+              </p>
+              <a href="/blog.html" class="btn btn-primary px-4">Learn More</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
+            <div class="blog-img position-relative overflow-hidden">
+              <img class="img-fluid" src="img/blog-3.jpg" alt="Blog 3">
+              <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
+                Lead Generation
+              </a>
+            </div>
+            <div class="p-4">
+              <h4 class="mb-3">How to generate leads</h4>
+              <p class="mb-3">
+                Generating leads begins with identifying your target audience and creating compelling offers that
+                attract their interest. By leveraging strategies like content marketing, social media, and paid ads, you
+                can drive quality traffic and convert prospects into valuable customers.
+              </p>
+              <a href="/blog.html" class="btn btn-primary px-4">Learn More</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog End -->
+
+  <!-- Client Logos Section Start -->
+  <section class="client-section bg-light py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase fw-bold">Trusted Partners</h5>
+        <h2 class="mb-0">Companies Who Trust Our Expertise</h2>
+      </div>
+
+      <!-- First Row: Right to Left -->
+      <div class="owl-carousel rtl-carousel fade-effect">
+        <div class="item"><img src="img/clients/1logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/2logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/3logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/4logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/5logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/6logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/7logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/8logo.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/9logo.png" alt="Client"></div>
+      </div>
+
+      <!-- Second Row: Left to Right -->
+      <div class="owl-carousel ltr-carousel fade-effect mt-4">
+        <div class="item"><img src="img/clients/NSF2.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/MV.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/MNF.jpg" alt="Client"></div>
+        <div class="item"><img src="img/clients/meghaartha.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_6.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_5.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_4.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_3.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_2.png" alt="Client"></div>
+        <div class="item"><img src="img/clients/logo_1.png" alt="Client"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Logos Section End -->
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.3.0/dist/wow.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initialize RTL (Right to Left) Carousel
+      $(".rtl-carousel").owlCarousel({
+        loop: true,
+        rtl: true,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Initialize LTR (Left to Right) Carousel
+      $(".ltr-carousel").owlCarousel({
+        loop: true,
+        rtl: false,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        smartSpeed: 1200,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: { items: 2 },
+          576: { items: 3 },
+          768: { items: 4 },
+          992: { items: 5 }
+        }
+      });
+
+      // Refresh carousels on window resize
+      $(window).on("resize", function () {
+        $(".owl-carousel").trigger("refresh.owl.carousel");
+      });
+    });
+    // Initialize tilt.js
+    $('.stats-card').tilt({
+      glare: true,
+      maxGlare: 0.2,
+      reset: false
+    });
+
+    // Initialize WOW.js
+    new WOW().init();
+  </script>
+  </body>
+  </html>

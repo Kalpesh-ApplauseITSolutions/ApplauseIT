@@ -88,19 +88,19 @@ h6,
     background-color:#F4780A !important;
 }
 .btn-primary {
-    color: #FFFFFF;
-    background-color: #F4780A;
-    border-color: #FFFFFF;
-    box-shadow: inset 0 0 0 50px transparent;
+    color: #FFFFFF !important;
+    background-color: #F4780A !important;
+    border-color: #FFFFFF !important;
+    box-shadow: inset 0 0 0 50px transparent !important;
 }
 .btn-secondary {
-    color: #FFFFFF;
-    background-color: #091E3E;
-    border-color: #FFFFFF;
-    box-shadow: inset 0 0 0 50px transparent;
+    color: #FFFFFF !important;
+    background-color: #091E3E !important;
+    border-color: #FFFFFF !important;
+    box-shadow: inset 0 0 0 50px transparent !important;
 }
 .btn-primary:hover {
-    box-shadow: inset 0 0 0 0 var(--primary);
+    box-shadow: inset 0 0 0 0 var(--primary) !important;
     background-color: var(--secondary) !important;
     color: var(--light) !important;
     border-color: var(--light) !important;
@@ -112,7 +112,7 @@ h6,
     border-color: var(--light) !important;
 }
 a:hover {
-    color: var(--light) !important;
+    color: var(--light);
 }
 .btn-square {
     width: 36px;

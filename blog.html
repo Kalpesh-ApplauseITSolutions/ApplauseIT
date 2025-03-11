@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Insights & Industry Trends | Applause IT Solutions</title>
     <link rel="icon" href="img/favicon/favicon.ico">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <!-- Icon Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- CSS Libraries -->
@@ -20,14 +23,28 @@
             background: linear-gradient(rgba(244, 120, 10, 0.9), rgba(244, 120, 10, 0.9)), url('img/blog-banner.jpg') center/cover;
             min-height: 400px;
         }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #F4780A;
+        }
+        .nav-link{
+            color: #F4780A;
+        }
+        .nav-link:hover{
+            color: var(--secondary);
+        }
         .post-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .post-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(155, 12, 12, 0.1);
         }
+
         .category-badge {
             background: #F4780A;
             color: white;
@@ -35,12 +52,17 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
+
         .post-meta {
             color: #6c757d;
             font-size: 0.9rem;
         }
+
         .pagination .page-link {
             color: #F4780A;
+        }
+        .pagination .page-link :hover{
+            color: var(--secondary);
         }
         .pagination .page-item.active .page-link {
             background: #F4780A;
@@ -48,6 +70,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Spinner -->
     <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -56,18 +79,18 @@
 
     <!-- Header -->
     <div id="header"></div>
-  <!-- Page Header Start -->
-  <div class="container-fluid bg-primary py-5 bg-header">
-    <div class="row py-5">
-      <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-        <h1 class="display-4 text-white animated zoomIn">Portfolio</h1>
-        <a href="index.html" class="h5 text-white">Home</a>
-        <i class="far fa-circle text-white px-2"></i>
-        <a href="blog.html" class="h5 text-white">Blog</a>
-      </div>
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-primary py-5 bg-header">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">Portfolio</h1>
+                <a href="index.html" class="h5 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="blog.html" class="h5 text-white">Blog</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- Page Header End -->
+    <!-- Page Header End -->
 
     <!-- Main Content -->
     <div class="container-fluid py-5">
@@ -78,98 +101,309 @@
                     <!-- Categories Navigation -->
                     <nav class="mb-5">
                         <div class="nav nav-pills" id="nav-tab" role="tablist">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">All</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#web-dev">Web Development</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#ui-ux">UI/UX</button>
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#seo">SEO</button>
+                          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">All</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#web-dev">Web Development</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#ux-design">UX Design</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#app-design">App Design</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#lead-gen">Lead Generation</button>
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#digital-marketing">Digital Marketing</button>
                         </div>
-                    </nav>
+                      </nav>
 
                     <!-- Blog Grid -->
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="all">
-                            <div class="row g-4">
-                                <!-- Blog Post 1 -->
-                                <div class="col-md-6 wow fadeInUp">
-                                    <div class="post-card bg-white rounded overflow-hidden h-100">
-                                        <img src="img/blog-1.jpg" class="img-fluid" alt="AI in Web Dev">
-                                        <div class="p-4">
-                                            <span class="category-badge">Web Development</span>
-                                            <h3 class="h4 my-3">Implementing AI in Modern Web Applications</h3>
-                                            <div class="post-meta mb-3">
-                                                <span class="me-3"><i class="far fa-calendar"></i> Mar 15, 2024</span>
-                                                <span><i class="far fa-clock"></i> 8 min read</span>
-                                            </div>
-                                            <p>Explore how artificial intelligence is revolutionizing user experiences...</p>
-                                            <a href="blog-details.html" class="btn btn-primary">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Add 5 more posts -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <nav class="mt-5" aria-label="Blog pagination">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- Sidebar -->
-                <div class="col-lg-4">
-                    <!-- Newsletter -->
-                    <div class="bg-white p-4 mb-5 rounded shadow-sm">
-                        <h3 class="h4 mb-4">Subscribe to Our Newsletter</h3>
-                        <form>
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                                <button class="btn btn-primary" type="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Popular Posts -->
-                    <div class="bg-white p-4 rounded shadow-sm">
-                        <h3 class="h4 mb-4">Popular Articles</h3>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex align-items-center">
-                                    <img src="img/blog-2.jpg" alt="Post" width="60" class="me-3">
-                                    <div>
-                                        <h6 class="mb-1">Cloud Security Best Practices</h6>
-                                        <small class="text-muted">Mar 10, 2024</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Add 4 more popular posts -->
-                        </div>
-                    </div>
-                </div>
+<!-- Blog Grid -->
+<div class="tab-content">
+    <!-- All Posts Tab -->
+    <div class="tab-pane fade show active" id="all">
+      <div class="row g-4">
+        <!-- Card 1: How to Build a Website (Web Development) -->
+        <div class="col-md-6 wow fadeInUp">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/web development.jpg" class="img-fluid" alt="How to Build a Website">
+            <div class="p-4">
+              <span class="category-badge">Web Development</span>
+              <h3 class="h4 my-3">How to Build a Website</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 10, 2024</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+              </div>
+              <p>Building a website begins with defining your goals and selecting the right platform...</p>
+              <a href="web-development-blog.html" class="btn btn-primary">Read More</a>
             </div>
+          </div>
         </div>
+        <!-- Card 2: UX Design Best Practices (UX Design) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/ui-ux.jpg" class="img-fluid" alt="UX Design Best Practices">
+            <div class="p-4">
+              <span class="category-badge">UX Design</span>
+              <h3 class="h4 my-3">UX Design Best Practices</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 11, 2024</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+              </div>
+              <p>Explore essential UX design principles that create intuitive and engaging user experiences...</p>
+              <a href="UX Design Best Practices.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3: Implementing AI in Modern Web Applications (Web Development) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/Implementing AI in Modern Web Applications.jpg" class="img-fluid" alt="Implementing AI in Modern Web Applications">
+            <div class="p-4">
+              <span class="category-badge">Web Development</span>
+              <h3 class="h4 my-3">Implementing AI in Modern Web Applications</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Mar 15, 2024</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+              </div>
+              <p>Explore how artificial intelligence is revolutionizing user experiences...</p>
+              <a href="Implementing AI in Modern Web Applications.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4: How to Generate Leads (Lead Generation) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/leadgen.jpg" class="img-fluid" alt="How to Generate Leads">
+            <div class="p-4">
+              <span class="category-badge">Lead Generation</span>
+              <h3 class="h4 my-3">How to Generate Leads</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 15, 2024</span>
+                <span><i class="far fa-clock"></i> 6 min read</span>
+              </div>
+              <p>Generating leads begins with identifying your target audience and creating compelling offers...</p>
+              <a href="How to Generate Leads.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5: How to Build an Application (App Design) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/How to Build an Application.jpg" class="img-fluid" alt="How to Build an Application">
+            <div class="p-4">
+              <span class="category-badge">App Design</span>
+              <h3 class="h4 my-3">How to Build an Application</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 12, 2024</span>
+                <span><i class="far fa-clock"></i> 9 min read</span>
+              </div>
+              <p>Building an application starts with identifying its purpose and designing an intuitive UI...</p>
+              <a href="How to Build an Application.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6: Digital Marketing Strategies (Digital Marketing) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="1s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/Digital Marketing Strategies.jpg" class="img-fluid" alt="Digital Marketing Strategies">
+            <div class="p-4">
+              <span class="category-badge">Digital Marketing</span>
+              <h3 class="h4 my-3">Digital Marketing Strategies</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 13, 2024</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+              </div>
+              <p>Learn how digital marketing can drive growth and enhance brand visibility for IT companies...</p>
+              <a href="Digital Marketing Strategies.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Web Development Tab -->
+    <div class="tab-pane fade" id="web-dev">
+      <div class="row g-4">
+        <!-- Only Cards with Web Development category (Cards 1 and 3) -->
+        <div class="col-md-6 wow fadeInUp">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/web development.jpg" class="img-fluid" alt="How to Build a Website">
+            <div class="p-4">
+              <span class="category-badge">Web Development</span>
+              <h3 class="h4 my-3">How to Build a Website</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 10, 2024</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+              </div>
+              <p>Building a website begins with defining your goals and selecting the right platform...</p>
+              <a href="web-development-blog.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/Implementing AI in Modern Web Applications.jpg" class="img-fluid" alt="Implementing AI in Modern Web Applications">
+            <div class="p-4">
+              <span class="category-badge">Web Development</span>
+              <h3 class="h4 my-3">Implementing AI in Modern Web Applications</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Mar 15, 2024</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+              </div>
+              <p>Explore how artificial intelligence is revolutionizing user experiences...</p>
+              <a href="Implementing AI in Modern Web Applications.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UX Design Tab -->
+    <div class="tab-pane fade" id="ux-design">
+      <div class="row g-4">
+        <!-- Only Card with UX Design category (Card 2) -->
+        <div class="col-md-6 wow fadeInUp">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/ui-ux.jpg" class="img-fluid" alt="UX Design Best Practices">
+            <div class="p-4">
+              <span class="category-badge">UX Design</span>
+              <h3 class="h4 my-3">UX Design Best Practices</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 11, 2024</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+              </div>
+              <p>Explore essential UX design principles that create intuitive and engaging user experiences...</p>
+              <a href="UX Design Best Practices.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Design Tab -->
+    <div class="tab-pane fade" id="app-design">
+      <div class="row g-4">
+        <!-- Only Card with App Design category (Card 5) -->
+        <div class="col-md-6 wow fadeInUp">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/How to Build an Application.jpg" class="img-fluid" alt="How to Build an Application">
+            <div class="p-4">
+              <span class="category-badge">App Design</span>
+              <h3 class="h4 my-3">How to Build an Application</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 12, 2024</span>
+                <span><i class="far fa-clock"></i> 9 min read</span>
+              </div>
+              <p>Building an application starts with identifying its purpose and designing an intuitive UI...</p>
+              <a href="How to Build an Application.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lead Generation Tab -->
+    <div class="tab-pane fade" id="lead-gen">
+      <div class="row g-4">
+        <!-- Only Card with Lead Generation category (Card 4) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/leadgen.jpg" class="img-fluid" alt="How to Generate Leads">
+            <div class="p-4">
+              <span class="category-badge">Lead Generation</span>
+              <h3 class="h4 my-3">How to Generate Leads</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 15, 2024</span>
+                <span><i class="far fa-clock"></i> 6 min read</span>
+              </div>
+              <p>Generating leads begins with identifying your target audience and creating compelling offers...</p>
+              <a href="How to Generate Leads.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Digital Marketing Tab -->
+    <div class="tab-pane fade" id="digital-marketing">
+      <div class="row g-4">
+        <!-- Only Card with Digital Marketing category (Card 6) -->
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="1s">
+          <div class="post-card bg-white rounded overflow-hidden h-100">
+            <img src="img/Digital Marketing Strategies.jpg" class="img-fluid" alt="Digital Marketing Strategies">
+            <div class="p-4">
+              <span class="category-badge">Digital Marketing</span>
+              <h3 class="h4 my-3">Digital Marketing Strategies</h3>
+              <div class="post-meta mb-3">
+                <span class="me-3"><i class="far fa-calendar"></i> Apr 13, 2024</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+              </div>
+              <p>Learn how digital marketing can drive growth and enhance brand visibility for IT companies...</p>
+              <a href="Digital Marketing Strategies.html" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pagination -->
+  <nav class="mt-5" aria-label="Blog pagination">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+ <!-- Sidebar -->
+ <div class="col-lg-4">
+    <!-- Newsletter -->
+    <div class="bg-white p-4 mb-5 rounded shadow-sm">
+      <h3 class="h4 mb-4">Subscribe to Our Newsletter</h3>
+      <form>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Enter your email">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Popular Posts -->
+    <div class="bg-white p-4 rounded shadow-sm">
+      <h3 class="h4 mb-4">Popular Articles</h3>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex align-items-center">
+            <img src="img/blog-2.jpg" alt="Post" width="60" class="me-3">
+            <div>
+              <h6 class="mb-1">Cloud Security Best Practices</h6>
+              <small class="text-muted">Mar 10, 2024</small>
+            </div>
+          </div>
+        </a>
+        <!-- Add 4 more popular posts as needed -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
 
     <!-- Footer -->
     <div id="footer"></div>
 
-  <!-- Footer -->
-  <div id="footer"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -157,7 +157,7 @@
   <!-- Facts End -->
 
   <!-- About Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
       <div class="row g-5">
         <div class="col-lg-7">
@@ -215,7 +215,7 @@
   <!-- About End -->
 
   <!-- Features Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
       <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
         <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
@@ -274,7 +274,7 @@
   <!-- Features End -->
 
   <!-- Our Services Start -->
-  <div class="container-fluid py-5">
+  <div class="container-fluid py-3">
     <div class="container py-5">
       <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
         <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
@@ -291,14 +291,14 @@
             <p class="mb-4">Build responsive, scalable web applications with modern frameworks and cloud-native
               architectures.</p>
             <div class="service-hover">
-              <a href="#" class="btn btn-primary px-4">Learn More</a>
+              <a href="/services.html" class="btn btn-primary px-4">Learn More</a>
             </div>
           </div>
         </div>
 
         <!-- Mobile App Development -->
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="service-item bg-light rounded-4 p-5 text-center">
+          <div class="service-item h-100 bg-light rounded-4 p-5 text-center">
             <div class="service-icon mb-4">
               <i class="fas fa-mobile-alt fa-3x text-white"></i>
             </div>
@@ -306,7 +306,7 @@
             <p class="mb-4">Native and cross-platform mobile solutions with seamless UX and robust backend integration.
             </p>
             <div class="service-hover">
-              <a href="#" class="btn btn-primary px-4">Learn More</a>
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
             </div>
           </div>
         </div>
@@ -321,7 +321,7 @@
             <p class="mb-4">AWS, Azure & Google Cloud integration with DevOps automation and microservices architecture.
             </p>
             <div class="service-hover">
-              <a href="#" class="btn btn-primary px-4">Learn More</a>
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
             </div>
           </div>
         </div>
@@ -335,7 +335,7 @@
             <h3 class="mb-3">Cybersecurity</h3>
             <p class="mb-4">End-to-end security solutions including vulnerability assessment and threat monitoring.</p>
             <div class="service-hover">
-              <a href="#" class="btn btn-primary px-4">Learn More</a>
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
             </div>
           </div>
         </div>
@@ -349,7 +349,7 @@
             <h3 class="mb-3">IT Consulting</h3>
             <p class="mb-4">Strategic technology roadmap development and digital transformation consulting.</p>
             <div class="service-hover">
-              <a href="#" class="btn btn-primary px-4">Learn More</a>
+              <a href="/ser" class="btn btn-primary px-4">Learn More</a>
             </div>
           </div>
         </div>
@@ -374,12 +374,12 @@
   <!-- Our Services End -->
 
   <!-- Quote Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
       <div class="row g-5">
         <div class="col-lg-7">
           <div class="section-title position-relative pb-3 mb-5">
-            <h5 class="fw-bold text-primary text-uppercase">Submit Enquiry</h5>
+            <h5 class="fw-bold text-primary text-uppercase">Get Enquiry</h5>
             <h1 class="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
           </div>
           <div class="row gx-3">
@@ -413,33 +413,38 @@
         </div>
         <div class="col-lg-5">
           <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-            <form>
+            <form id="enquiryForm" action="send_enquiry.php" method="post">
               <div class="row g-3">
                 <div class="col-xl-12">
-                  <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
-                    style="height: 55px;">
+                  <input type="text" name="name" id="name" class="form-control bg-light border-0" placeholder="Your Name"
+                         style="height: 55px;" required>
+                  <label for="name">Your Name</label>
                 </div>
                 <div class="col-12">
-                  <input type="email" class="form-control bg-light border-0" placeholder="Your Email"
-                    style="height: 55px;">
+                  <input type="email" name="email" id="email" class="form-control bg-light border-0" placeholder="Your Email"
+                         style="height: 55px;" required>
+                  <label for="email">Your Email</label>
                 </div>
                 <div class="col-12">
-                  <select class="form-select bg-light border-0" style="height: 55px;">
-                    <option value="1">Service 1</option>
-                    <option value="2">Service 2</option>
-                    <option value="3">Service 3</option>
+                  <select class="form-select bg-light border-0" name="service" id="service" style="height: 55px;">
+                    <option value="Service 1">Service 1</option>
+                    <option value="Service 2">Service 2</option>
+                    <option value="Service 3">Service 3</option>
                   </select>
+                  <label for="service">Select Service</label>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                  <textarea name="message" id="message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-dark w-100 py-3" type="submit">Submit Enquiry</button>
+                  <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
+        
+        
       </div>
     </div>
   </div>
@@ -501,7 +506,7 @@
   <!-- Why Choose Us End -->
 
   <!-- Testimonial Start -->
-  <section class="testimonial-section bg-light py-5">
+  <section class="testimonial-section bg-light py-3">
     <div class="container py-5">
       <div class="text-center mb-5">
         <h5 class="text-primary text-uppercase fw-bold">Testimonials</h5>
@@ -576,7 +581,7 @@
       </div>
       <div class="row g-5">
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
             <div class="blog-img position-relative overflow-hidden">
               <img class="img-fluid" src="img/blog-1.jpg" alt="Blog 1">
               <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
@@ -590,15 +595,15 @@
                 to life. By choosing a user-friendly design, incorporating essential features, and optimizing for search
                 engines, you can create a functional and visually appealing online presence.
               </p>
-              <div class="service-hover">
+              
               <a href="#" class="btn btn-primary px-4">Learn More</a>
-            </div>
+            
             </div>
             
           </div>
         </div>
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
             <div class="blog-img position-relative overflow-hidden">
               <img class="img-fluid" src="img/blog-2.jpg" alt="Blog 2">
               <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
@@ -606,21 +611,19 @@
               </a>
             </div>
             <div class="p-4">
-              <h4 class="mb-3">How to build an application</h4>
+              <h4 class="mb-3">How to build application</h4>
               <p>
                 Building an application starts with identifying its purpose and target audience, followed by designing
                 an intuitive user interface. With the right development tools and thorough testing, you can create a
-                high-performing app that delivers value to users. Continuous updates and user feedback ensure the app
-                evolves to meet growing needs and expectations.
+                high performing app that delivers value to users.
               </p>
-              <div class="service-hover">
-                <a href="#" class="btn btn-primary px-4">Learn More</a>
-              </div>
+              <a href="#" class="btn btn-primary px-4">Learn More</a>
+
             </div>
           </div>
         </div>
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="blog-item h-100 bg-light rounded overflow-hidden">
             <div class="blog-img position-relative overflow-hidden">
               <img class="img-fluid" src="img/blog-3.jpg" alt="Blog 3">
               <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
@@ -629,11 +632,13 @@
             </div>
             <div class="p-4">
               <h4 class="mb-3">How to generate leads</h4>
-              <p>
+              <p class="mb-3">
                 Generating leads begins with identifying your target audience and creating compelling offers that
                 attract their interest. By leveraging strategies like content marketing, social media, and paid ads, you
                 can drive quality traffic and convert prospects into valuable customers.
               </p>
+              <a href="#" class="btn btn-primary px-4">Learn More</a>
+
             </div>
           </div>
         </div>

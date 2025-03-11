@@ -1,103 +1,106 @@
 <style>
-  /*** Custom Header Styles ***/
-  .header-top {
-      background: var(--secondary);
-      padding: 8px 0;
-      transition: all 0.3s ease;
-      font-weight: 400;
-  }
-  
-  .navbar {
-      position: fixed;
-      width: 100%;
-      top: 40px;
-      z-index: 999;
-      transition: all 0.3s ease;
-      background: transparent !important;
-  }
-  
-  .navbar.sticky {
-      top: 0;
-      background: var(--secondary) !important;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  }
-  
-  .navbar-brand img {
-      height: 55px;
-      transition: all 0.3s ease;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link {
-      color: rgba(255,255,255,0.8);
-      font-weight: 500;
-      padding: 10px 15px;
-      margin: 0 5px;
-      transition: all 0.3s ease;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link:hover,
-  .navbar-dark .navbar-nav .nav-link.active {
-      color: var(--primary) !important;
-  }
-  
-  .navbar-toggler {
-      border-color: rgba(255,255,255,0.5);
-  }
-  
-  .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      width: 1.5em;
-      height: 1.5em;
-  }
-  
-  /* Social Icons */
-  .social-icons a {
-      width: 35px;
-      height: 35px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      transition: all 0.3s ease;
-      margin-left: 8px;
-  }
-  
-  .social-icons a:hover {
-      background: var(--primary);
-      transform: translateY(-2px);
-  }
-  
-  .social-icons a i {
-      font-size: 1rem;
-  }
-  
-  @media (max-width: 991.98px) {
-      .navbar {
-          top: 0;
-          background: var(--secondary) !important;
-          padding: 10px 0;
-      }
-      
-      .navbar-collapse {
-          background: var(--secondary);
-          padding: 15px;
-          margin-top: 10px;
-      }
-      
-      .navbar-nav {
-          padding-top: 15px;
-      }
-      
-      .navbar-brand img {
-          height: 45px;
-      }
-      
-      .social-icons {
-          margin-top: 15px;
-          justify-content: center !important;
-      }
-  }
+    /*** Custom Header Styles ***/
+    .header-top {
+        background: var(--secondary);
+        padding: 8px 0;
+        transition: all 0.3s ease;
+        font-weight: 400;
+    }
+    
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 40px;
+        z-index: 999;
+        transition: all 0.3s ease;
+        background: transparent !important;
+    }
+    
+    .navbar.sticky {
+        top: 0;
+        background: var(--secondary) !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand img {
+        height: 55px;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgba(255,255,255,0.8);
+        font-weight: 500;
+        padding: 10px 15px;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary) !important;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.5em;
+        height: 1.5em;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Social Icons */
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+        background: var(--primary);
+        margin-left: 8px;
+    }
+    
+    .social-icons a:hover {
+        background: var(--secondary);
+        border-color: var(--primary);
+        transform: translateY(-2px);
+    }
+    
+    .social-icons a i {
+        font-size: 1rem;
+    }
+    
+    @media (max-width: 991.98px) {
+        .navbar {
+            top: 0;
+            background: var(--secondary) !important;
+            padding: 10px 0;
+        }
+        
+        .navbar-collapse {
+            background: var(--secondary);
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .navbar-nav {
+            padding-top: 15px;
+        }
+        
+        .navbar-brand img {
+            height: 45px;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+            justify-content: center !important;
+        }
+    }
   </style>
   
   <!-- Top Bar -->
@@ -132,11 +135,11 @@
         <a class="navbar-brand" href="/index.html">
             <img src="img/applause.png" alt="ApplauseIT logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Custom burger toggler without Bootstrap data attributes -->
+        <button class="navbar-toggler" id="customBurger" type="button" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-  
+    
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
@@ -156,35 +159,42 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  // Header Scroll Effect
-  window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 100) {
-          navbar.classList.add('sticky');
-      } else {
-          navbar.classList.remove('sticky');
-      }
-  });
-  
-  // Active Link Handling
-  document.addEventListener('DOMContentLoaded', function() {
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-link').forEach(link => {
-          const linkPath = link.getAttribute('href').split('/').pop();
-          if (linkPath === currentPath) {
-              link.classList.add('active');
-              link.setAttribute('aria-current', 'page');
-          }
-      });
-  });
-  
-  // Mobile Menu Close on Click
-  document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-          const navbarCollapse = document.getElementById('mainNav');
-          if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-              new bootstrap.Collapse(navbarCollapse).hide();
-          }
-      });
-  });
+    // Header Scroll Effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    });
+    
+    // Active Link Handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+            const linkPath = link.getAttribute('href').split('/').pop();
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+    });
+    
+    // Custom Burger Toggler Functionality
+    document.getElementById('customBurger').addEventListener('click', function() {
+        const navbarCollapse = document.getElementById('mainNav');
+        navbarCollapse.classList.toggle('show');
+    });
+    
+    // Mobile Menu Close on Click (manual toggle removal)
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navbarCollapse = document.getElementById('mainNav');
+            if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
   </script>
+  
