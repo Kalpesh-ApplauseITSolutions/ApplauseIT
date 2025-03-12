@@ -101,6 +101,24 @@
             justify-content: center !important;
         }
     }
+     /* Additional media query to fix layout around 1024px */
+     @media (min-width: 992px) and (max-width: 1024px) {
+        /* Slightly reduce image & nav font so it all fits */
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            font-size: 0.9rem;
+            margin: 0 3px;
+            padding: 8px 10px;
+        }
+        .btn.btn-primary.ms-lg-3 {
+            margin-left: 0 !important;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            padding: 8px 14px;
+        }
+    }
   </style>
   
   <!-- Top Bar -->

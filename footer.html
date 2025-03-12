@@ -1,4 +1,47 @@
- <!-- Footer Start -->
+<style>
+    /* Positioning for the floating icons */
+    .floating-icon {
+      position: fixed;
+      bottom: 20px;
+      padding: 15px;
+      font-size: 24px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    /* Left corner for Call Icon */
+    .floating-icon-call {
+      color: white;
+      left: 20px; /* Position the Call Icon on the left */
+      background-color: #34b7f1; /* Call Blue */
+    }
+
+    /* Right corner for WhatsApp Icon */
+    .floating-icon-whatsapp {
+      color: white  ;
+      right: 20px; /* Position the WhatsApp Icon on the right */
+      background-color: #25d366; /* WhatsApp Green */
+    }
+
+    /* Hover effect for floating icons */
+    .floating-icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* Hover effect for WhatsApp */
+    .floating-icon-whatsapp:hover {
+      background-color: #25d366; /* Darken WhatsApp Green on hover */
+    }
+
+    /* Hover effect for Call */
+    .floating-icon-call:hover {
+      background-color: #34b7f1; /* Darken Call Blue on hover */
+    }
+</style>
+
+<!-- Footer Start -->
  <footer>
     <div class="container-fluid  text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" style="background: #061429;">
       <div class="container">
@@ -102,14 +145,6 @@
                     <i class="bi bi-arrow-right text-primary me-2"></i>
                     Contact Us
                   </a>
-                  <a class="text-light mb-2" href="#">
-                    <i class="bi bi-arrow-right text-primary me-2"></i>
-                    Privacy Policy
-                  </a>
-                  <a class="text-light" href="#">
-                    <i class="bi bi-arrow-right text-primary me-2"></i>
-                    Terms of Use
-                  </a>
                 </div>
               </div>
             </div>
@@ -123,7 +158,7 @@
           <div class="col-lg-8 col-md-6">
             <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
               <p class="mb-0">
-                2025 © <a class="text-primary border-bottom" href="#">Applause IT Solutions</a>. All Rights Reserved.
+                Copyright © 2025<a class="text-primary border-bottom" href="https://applauseitsolutions.com"> Applause IT Solutions</a>. All Rights Reserved | Sitemap | <a class="text-white border-bottom" href="Terms & Conditions.html">Terms & Conditions</a>
                 <!-- Designed by <a class="text-white border-bottom" href="https://applauseitsolutions.com/">Applause IT Solutions</a> -->
               </p>
             </div>
@@ -133,4 +168,12 @@
     </div>
   </footer>
   <!-- Footer End -->
- 
+ <!-- Call Floating Icon (left side) -->
+ <a href="tel:+919860133100" class="floating-icon floating-icon-call" target="_blank">
+  <i class="fas fa-phone-alt"></i>
+</a>
+
+<!-- WhatsApp Floating Icon (right side) -->
+<a href="https://wa.me/919860133100" class="floating-icon floating-icon-whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>

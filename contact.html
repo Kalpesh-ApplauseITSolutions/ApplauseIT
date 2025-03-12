@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Icon Font Stylesheet -->
   <!-- Font Awesome (Updated Version) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -20,13 +21,23 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+
   <style>
+    /* Slightly smaller but consistent font for contact info */
+    /* .contact-info {
+      font-size: 18px !important;
+    } */
+    /* Icon container sizing */
     .icon-box {
       width: 60px;
       height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 auto 15px; /* center icon and add bottom spacing */
+    }
+    .icon-box i {
+      font-size: 24px; /* consistent icon size */
     }
     /* Fix full-screen search */
     .modal-fullscreen {
@@ -56,7 +67,8 @@
   <!-- Header End -->
 
   <!-- Full Screen Search Start -->
-  <!-- <div class="modal fade" id="searchModal" tabindex="-1">
+  <!--
+  <div class="modal fade" id="searchModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header border-0">
@@ -72,7 +84,8 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+  -->
   <!-- Full Screen Search End -->
 
   <!-- Contact Start -->
@@ -83,81 +96,68 @@
         <h1 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h1>
       </div>
 
-      <!-- Contact Info Blocks in separate rows -->
-      <div class="row g-5 mb-5">
-        <!-- Phone -->
-        <div class="col-12">
-          <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded icon-box">
-              <i class="fa fa-phone-alt text-white"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="mb-2">Call to ask any question</h5>
-              <h4 class="text-primary mb-0">
-                (+91) 9860133100 <br>
-                (+91) 8600040039
-              </h4>
-            </div>
+      <!-- Contact Info: Three columns, icons + text, centered, no cards -->
+      <div class="row g-5 mb-5 contact-info text-center">
+        <!-- 1. Business Enquiry -->
+        <div class="col-12 col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+          <div class="icon-box bg-white rounded">
+            <i class="fa fa-handshake text-primary"></i>
           </div>
+          <p class="text-primary mb-0" style="font-size: 18px;">
+            +91 9860133100<br>
+            info@applauseitsolutions.com
+          </p>
         </div>
-        <!-- Email -->
-        <div class="col-12">
-          <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded icon-box">
-              <i class="fa fa-envelope-open text-white"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="mb-2">Email to get free quote</h5>
-              <h4 class="text-primary mb-0">info@applauseitsolutions.com</h4>
-            </div>
+        <!-- 2. Customer Support -->
+        <div class="col-12 col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+          <div class="icon-box bg-white rounded">
+            <i class="fa fa-headset text-primary"></i>
           </div>
+          <p class="text-primary mb-0" style="font-size: 18px;">
+            +91 8600040039<br>
+            support@applauseitsolutions.com
+          </p>
         </div>
-        <!-- Office -->
-        <div class="col-12">
-          <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded icon-box">
-              <i class="fa fa-map-marker-alt text-white"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="mb-2">Visit our office</h5>
-              <h4 class="text-primary mb-0">
-                Office No 1, 1st Floor, Chandrashila Complex, NDA Road,<br>
-                Shivane, Pune - 411023 (MH, India)
-              </h4>
-            </div>
+        <!-- 3. Career Guide -->
+        <div class="col-12 col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.8s">
+          <div class="icon-box bg-white rounded">
+            <i class="fa fa-briefcase text-primary"></i>
           </div>
+          <p class="text-primary mb-0" style="font-size: 18px;">
+            hr@applauseitsolutions.com
+          </p>
         </div>
       </div>
 
+      <!-- Contact Form and Map -->
       <div class="row g-5">
-        <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-          <form>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
-              </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
-              </div>
-              <div class="col-12">
-                <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
-              </div>
-              <div class="col-12">
-                <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-              </div>
-            </div>
-          </form>
-        </div>
+        <!-- Update the form section -->
+<div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+  <form action="send_contact.php" method="POST" id="contactForm">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" name="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;" required>
+      </div>
+      <div class="col-12">
+        <input type="text" name="subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;" required>
+      </div>
+      <div class="col-12">
+        <textarea name="message" class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message" required></textarea>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+      </div>
+    </div>
+  </form>
+</div>
         <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
           <iframe class="position-relative rounded w-100 h-100"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785152.4145618537!2d73.78394831404288!3d18.52043029725008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c85e8f8f8d7f%3A0x2cddf7c9e6d9b34!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1603794972920!5m2!1sen!2sin"
-                  frameborder="0"
-                  style="min-height: 350px; border:0;"
-                  aria-hidden="false"
-                  tabindex="0">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.4169518748786!2d73.77306007379907!3d18.464763470879287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2958fcb83f531%3A0x328dddfbc36a6074!2sApplause%20IT%20Solutions!5e0!3m2!1sen!2sin!4v1741752595381!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -165,25 +165,6 @@
   </div>
   <!-- Contact End -->
 
-  <!-- Vendor Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5 mb-5">
-      <div class="bg-white">
-        <div class="owl-carousel vendor-carousel">
-          <img src="img/vendor-1.jpg" alt="">
-          <img src="img/vendor-2.jpg" alt="">
-          <img src="img/vendor-3.jpg" alt="">
-          <img src="img/vendor-4.jpg" alt="">
-          <img src="img/vendor-5.jpg" alt="">
-          <img src="img/vendor-6.jpg" alt="">
-          <img src="img/vendor-7.jpg" alt="">
-          <img src="img/vendor-8.jpg" alt="">
-          <img src="img/vendor-9.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Vendor End -->
 
   <!-- Footer Start -->
   <div id="footer"></div>
